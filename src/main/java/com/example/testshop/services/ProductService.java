@@ -50,6 +50,7 @@ public class ProductService {
     }
 
     private Image toImageEntity(MultipartFile file) throws IOException {
+        log.info("Formatting the file for the database");
         Image image = new Image();
         image.setName(file.getName());
         image.setOriginalFileName(file.getOriginalFilename());
